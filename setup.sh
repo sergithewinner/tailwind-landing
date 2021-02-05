@@ -14,7 +14,7 @@ jq '.scripts.test = "tailwind build src/style.css -o dist/style.css"' package.js
 sed -i s/test/build:css/g package.json
 printf '@tailwind base;\n@tailwind components;\n@tailwind utilities;' >> src/style.css
 npm run build:css
-# touch .gitignore && echo "node_modules/" >> .gitignore && git rm -r --cached node_modules ; git status
+touch .gitignore && echo "node_modules/" >> .gitignore && git rm -r --cached node_modules ; git status
 
 
 
